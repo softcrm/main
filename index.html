@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>당신의 선명한 일상을 디자인합니다 -  성민안경</title>
+    <title>당신의 선명한 일상을 디자인합니다 - 성민안경</title>
     
-    <!-- Pretendard Font: 현대적 가독성을 제공하는 웹 폰트 -->
+    <!-- Pretendard Font: 가독성이 뛰어난 현대적 웹 폰트 -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     
-    <!-- FontAwesome: UI용 아이콘 라이브러리 -->
+    <!-- FontAwesome: 전문적인 인터페이스 아이콘 라이브러리 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Tailwind CSS (CDN) -->
@@ -18,9 +18,9 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#F97316', /* 주황색 */
+                        primary: '#F97316', /* 주황색: 친근함과 활력 */
                         primaryDark: '#EA580C',
-                        brandBlue: '#007BFF', /* 파란색 */
+                        brandBlue: '#007BFF', /* 파란색: 신뢰와 전문성 */
                         dark: '#333333',
                         light: '#F8F9FA'
                     },
@@ -38,6 +38,7 @@
         .tab-content.active { display: grid; opacity: 1; }
         .header-scrolled { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); }
         
+        /* 아코디언 애니메이션 최적화 */
         .accordion-content {
             max-height: 0;
             overflow: hidden;
@@ -50,13 +51,14 @@
         }
         .accordion-item.active .chevron-icon { transform: rotate(180deg); }
 
+        /* 로딩 스피너 애니메이션 */
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .animate-spin-custom { animation: spin 1s linear infinite; }
     </style>
 </head>
 <body class="text-gray-800 antialiased overflow-x-hidden">
 
-    <!-- 1. Header -->
+    <!-- 1. Header: 상단 고정 네비게이션 -->
     <header id="header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -78,6 +80,7 @@
                 </div>
             </div>
         </div>
+        <!-- 모바일 메뉴 -->
         <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#about" class="block px-3 py-2 text-gray-600 hover:text-primary rounded-md">About</a>
@@ -90,7 +93,7 @@
         </div>
     </header>
 
-    <!-- 2. Hero Section -->
+    <!-- 2. Hero Section: 메인 비주얼 -->
     <section id="home" class="relative h-screen flex items-center justify-center">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?q=80&w=2070&auto=format&fit=crop" alt="메인이미지" class="w-full h-full object-cover">
@@ -108,21 +111,27 @@
     <!-- 3. About Us -->
     <section id="about" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">왜 성민안경인가요?</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">왜 성민안경인가요?</h2>
             <div class="w-20 h-1 bg-primary mx-auto mb-16"></div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div class="group">
-                    <div class="w-20 h-20 bg-orange-50 text-primary rounded-full flex items-center justify-center mx-auto mb-6 transition-colors group-hover:bg-primary group-hover:text-white"><i class="fa-solid fa-user-doctor text-3xl"></i></div>
+                    <div class="w-20 h-20 bg-orange-50 rounded-full flex items-center justify-center mx-auto mb-6 transition-colors group-hover:bg-primary group-hover:text-white text-primary">
+                        <i class="fa-solid fa-user-doctor text-3xl"></i>
+                    </div>
                     <h3 class="text-xl font-bold mb-3">전문 안경사</h3>
                     <p class="text-gray-600">15년 경력의 국가면허 소지 안경사가 직접 상담합니다.</p>
                 </div>
                 <div class="group">
-                    <div class="w-20 h-20 bg-orange-50 text-primary rounded-full flex items-center justify-center mx-auto mb-6 transition-colors group-hover:bg-primary group-hover:text-white"><i class="fa-solid fa-microscope text-3xl"></i></div>
+                    <div class="w-20 h-20 bg-orange-50 rounded-full flex items-center justify-center mx-auto mb-6 transition-colors group-hover:bg-primary group-hover:text-white text-primary">
+                        <i class="fa-solid fa-microscope text-3xl"></i>
+                    </div>
                     <h3 class="text-xl font-bold mb-3">최신 검안 장비</h3>
                     <p class="text-gray-600">독일제 최신식 3D 검안 기기로 정확도를 극대화했습니다.</p>
                 </div>
                 <div class="group">
-                    <div class="w-20 h-20 bg-orange-50 text-primary rounded-full flex items-center justify-center mx-auto mb-6 transition-colors group-hover:bg-primary group-hover:text-white"><i class="fa-solid fa-tag text-3xl"></i></div>
+                    <div class="w-20 h-20 bg-orange-50 rounded-full flex items-center justify-center mx-auto mb-6 transition-colors group-hover:bg-primary group-hover:text-white text-primary">
+                        <i class="fa-solid fa-tag text-3xl"></i>
+                    </div>
                     <h3 class="text-xl font-bold mb-3">정직한 가격</h3>
                     <p class="text-gray-600">투명한 가격 정찰제 운영을 통해 합리적인 소비를 돕습니다.</p>
                 </div>
@@ -130,25 +139,101 @@
         </div>
     </section>
 
-    <!-- 4~7 섹션 생략 (원본 로직 유지) -->
+    <!-- 4. Products -->
+    <section id="products" class="py-24 bg-light text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">안경 컬렉션</h2>
+            <div class="w-20 h-1 bg-primary mx-auto mb-12"></div>
+            <div class="flex justify-center space-x-4 mb-12">
+                <button class="tab-btn active px-6 py-2 rounded-full bg-primary text-white" data-target="trendy">안경테</button>
+                <button class="tab-btn px-6 py-2 rounded-full bg-gray-200 text-gray-600" data-target="sunglass">선글라스</button>
+            </div>
+            <div id="trendy" class="tab-content active grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden"><img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=800" class="w-full h-48 object-cover"><div class="p-4">고급 티타늄 안경</div></div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden"><img src="https://images.unsplash.com/photo-1577803645773-f96470509666?q=80&w=800" class="w-full h-48 object-cover"><div class="p-4">모던 아세테이트</div></div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden"><img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?q=80&w=800" class="w-full h-48 object-cover"><div class="p-4">인텔리전트 하프</div></div>
+            </div>
+            <div id="sunglass" class="tab-content grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden"><img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=800" class="w-full h-48 object-cover"><div class="p-4">에비에이터</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Services -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">검안 프로세스</h2>
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+                <div class="group flex flex-col items-center">
+                    <div class="w-16 h-16 bg-orange-50 text-primary rounded-full flex items-center justify-center text-2xl transition-colors hover:text-brandBlue hover:bg-blue-50 cursor-pointer"><i class="fa-solid fa-eye"></i></div>
+                    <p class="mt-4 font-bold">1. 정밀 시력검사</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-gray-300 hidden md:block"></i>
+                <div class="group flex flex-col items-center">
+                    <div class="w-16 h-16 bg-orange-50 text-primary rounded-full flex items-center justify-center text-2xl transition-colors hover:text-brandBlue hover:bg-blue-50 cursor-pointer"><i class="fa-solid fa-comments"></i></div>
+                    <p class="mt-4 font-bold">2. 1:1 라이프 컨설팅</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-gray-300 hidden md:block"></i>
+                <div class="group flex flex-col items-center">
+                    <div class="w-16 h-16 bg-orange-50 text-primary rounded-full flex items-center justify-center text-2xl transition-colors hover:text-brandBlue hover:bg-blue-50 cursor-pointer"><i class="fa-solid fa-ruler-combined"></i></div>
+                    <p class="mt-4 font-bold">3. 개인별 맞춤 피팅</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Customers: 아코디언 후기 -->
+    <section id="customers" class="py-24 bg-light">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">고객 리얼 후기</h2>
+            <div class="space-y-4">
+                <div class="accordion-item active bg-white rounded-lg border overflow-hidden">
+                    <button class="accordion-header w-full p-6 text-left flex justify-between font-bold">
+                        <span>40대 남성 김*민 고객님</span>
+                        <i class="fa-solid fa-chevron-down chevron-icon transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">"업무용 안경을 맞췄는데 장시간 착용해도 피로감이 없고 코 눌림이 없어 너무 편안합니다."</div>
+                </div>
+                <div class="accordion-item bg-white rounded-lg border overflow-hidden">
+                    <button class="accordion-header w-full p-6 text-left flex justify-between font-bold">
+                        <span>20대 여성 최*영 고객님</span>
+                        <i class="fa-solid fa-chevron-down chevron-icon transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-6">"제 얼굴형에 딱 맞는 피팅 덕분에 안경이 흘러내리지 않아요. 디자인도 트렌디해서 만족합니다."</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Care Section: 동영상 -->
+    <section id="care" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">안경관리 가이드</h2>
+            <div class="rounded-xl overflow-hidden shadow-xl aspect-video relative">
+                <iframe src="https://player.vimeo.com/video/1185156486?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" class="absolute inset-0 w-full h-full" title="안경_세척_방법"></iframe>
+            </div>
+        </div>
+    </section>
 
     <!-- 8. Booking & Location Section -->
     <section id="booking" class="py-24 bg-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row gap-16">
                 
+                <!-- 예약 폼 영역 -->
                 <div class="w-full lg:w-1/2">
                     <h2 class="text-3xl font-bold text-gray-900 mb-2">방문 예약하기</h2>
                     <p class="text-gray-600 mb-8 font-light">작성하신 내용은 구글 시트에 자동 저장되며 담당자에게 메일이 발송됩니다.</p>
                     
-                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.submitted) { window.showSuccessModal(); }"></iframe>
+                    <!-- 데이터 전송을 위한 Hidden Iframe (CORS 방지용 브릿지) -->
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.submitted) { showSuccessModal(); }"></iframe>
 
-                    <!-- [주의] action에 생성하신 구글 앱스 스크립트 URL을 넣으세요 -->
+                    <!-- 구글 앱스 스크립트 URL을 action에 직접 입력하세요 -->
                     <form id="bookingForm" 
-                          action="https://script.google.com/macros/s/AKfycbyaM1vKNsHfCTmdNgZZrfNHCABADCMzocFQvhA2LPOreUK0WxBAPftLKrb3bqdndR0i/exec" 
+                          action="https://script.google.com/macros/s/AKfycby..." 
                           method="POST" 
                           target="hidden_iframe" 
-                          onsubmit="window.submitted=true; showBtnLoading();">
+                          onsubmit="window.submitted=true;">
                         
                         <div class="space-y-6 bg-white p-8 rounded-xl shadow-sm border border-gray-100">
                             <div>
@@ -181,6 +266,7 @@
                     </form>
                 </div>
 
+                <!-- 위치 정보 영역 -->
                 <div class="w-full lg:w-1/2 flex flex-col">
                     <h2 class="text-3xl font-bold text-gray-900 mb-2">오시는 길</h2>
                     <p class="text-gray-600 mb-8">서울시 구로구 디지털로 243</p>
@@ -192,7 +278,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- 9. Footer: 푸터 -->
     <footer class="bg-dark py-12 text-center">
         <p class="text-gray-400 text-sm">&copy; 2026 성민안경. All rights reserved.</p>
     </footer>
@@ -204,25 +290,14 @@
                 <i class="fa-solid fa-check text-3xl"></i>
             </div>
             <h3 class="text-2xl font-bold text-gray-900 mb-2">예약 접수 성공</h3>
-            <p class="text-gray-600 mb-6 font-light">데이터가 구글 시트에 저장되었으며,<br>담당자에게 알림 메일이 발송되었습니다.</p>
-            <button onclick="window.closeModal()" class="w-full bg-primary hover:bg-primaryDark text-white font-bold py-3 rounded-lg transition-colors">확인</button>
+            <p class="text-gray-600 mb-6 font-light">구글 시트에 데이터가 안전하게 저장되었습니다.<br>관리자 메일로 알림이 발송되었습니다.</p>
+            <button onclick="closeModal()" class="w-full bg-primary hover:bg-primaryDark text-white font-bold py-3 rounded-lg transition-colors">확인</button>
         </div>
     </div>
 
     <script>
-        // 전역 변수 및 함수 설정 (Iframe 로드 시 안전한 접근을 위해 window 객체에 할당)
+        // 전역 범위에서 변수와 함수 선언 (iframe 인라인 이벤트 핸들러에서 접근 가능하도록 함)
         window.submitted = false;
-
-        window.showBtnLoading = function() {
-            const submitBtn = document.getElementById('submitBtn');
-            const btnText = document.getElementById('btnText');
-            const btnSpinner = document.getElementById('btnSpinner');
-            if (submitBtn) {
-                submitBtn.disabled = true;
-                btnText.classList.add('hidden');
-                btnSpinner.classList.remove('hidden');
-            }
-        };
 
         window.showSuccessModal = function() {
             const modal = document.getElementById('successModal');
@@ -230,12 +305,10 @@
             const btnText = document.getElementById('btnText');
             const btnSpinner = document.getElementById('btnSpinner');
 
-            // 버튼 상태 복구
-            if (submitBtn) {
-                submitBtn.disabled = false;
-                btnText.classList.remove('hidden');
-                btnSpinner.classList.add('hidden');
-            }
+            // 로딩 상태 해제
+            if (submitBtn) submitBtn.disabled = false;
+            if (btnText) btnText.classList.remove('hidden');
+            if (btnSpinner) btnSpinner.classList.add('hidden');
 
             // 모달 표시
             if (modal) {
@@ -245,7 +318,8 @@
                     modal.querySelector('div').classList.add('scale-100');
                 }, 10);
             }
-            window.submitted = false;
+            
+            window.submitted = false; // 상태 초기화
         };
 
         window.closeModal = function() {
@@ -261,11 +335,55 @@
         };
 
         document.addEventListener('DOMContentLoaded', () => {
+            // 헤더 스크롤 로직
             const header = document.getElementById('header');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 20) header.classList.add('header-scrolled');
                 else header.classList.remove('header-scrolled');
             });
+
+            // 탭 메뉴 로직
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-primary', 'text-white');
+                        b.classList.add('bg-gray-200', 'text-gray-600');
+                    });
+                    btn.classList.add('active', 'bg-primary', 'text-white');
+                    btn.classList.remove('bg-gray-200', 'text-gray-600');
+                    
+                    document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+                    document.getElementById(btn.dataset.target).classList.add('active');
+                });
+            });
+
+            // 아코디언 로직
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(ah => {
+                ah.addEventListener('click', () => {
+                    const item = ah.parentElement;
+                    const isActive = item.classList.contains('active');
+                    document.querySelectorAll('.accordion-item').forEach(ai => ai.classList.remove('active'));
+                    if (!isActive) item.classList.add('active');
+                });
+            });
+
+            // 폼 제출 로딩 효과
+            const bookingForm = document.getElementById('bookingForm');
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', () => {
+                    const submitBtn = document.getElementById('submitBtn');
+                    const btnText = document.getElementById('btnText');
+                    const btnSpinner = document.getElementById('btnSpinner');
+                    
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        btnText.classList.add('hidden');
+                        btnSpinner.classList.remove('hidden');
+                    }
+                });
+            }
 
             // 모바일 메뉴 토글
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
